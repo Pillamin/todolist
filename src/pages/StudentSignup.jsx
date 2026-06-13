@@ -11,7 +11,7 @@ export default function StudentSignup() {
   };
 
   return (
-    <div className="signup-container">
+    <div className="page-container glass-panel">
       <h2>Student Signup</h2>
       <form onSubmit={handleSignup}>
         <div>

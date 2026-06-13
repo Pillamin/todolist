@@ -22,9 +22,9 @@ export default function TodoList() {
   };
 
   return (
-    <div className="todo-container">
+    <div className="page-container glass-panel">
       <h2>Todo List</h2>
-      <div>
+      <div className="todo-input-group">
         <input 
           type="text" 
           value={newTodo} 
@@ -33,16 +33,16 @@ export default function TodoList() {
         />
         <button onClick={handleAddTodo}>Add</button>
       </div>
-      <ul>
+      <ul className="todo-list">
         {todos.map(todo => (
           <li key={todo.id}>
             <span 
-              style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+              className={`todo-text ${todo.completed ? 'completed' : ''}`}
               onClick={() => handleToggleTodo(todo.id)}
             >
               {todo.text}
             </span>
-            <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+            <button className="delete-btn" onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
           </li>
         ))}
       </ul>

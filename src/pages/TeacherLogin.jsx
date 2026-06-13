@@ -11,7 +11,7 @@ export default function TeacherLogin() {
   };
 
   return (
-    <div className="login-container">
+    <div className="page-container glass-panel">
       <h2>Teacher Login</h2>
       <form onSubmit={handleLogin}>
         <div>
